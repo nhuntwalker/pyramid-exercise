@@ -18,4 +18,4 @@ class MyModel(Base):
     ffood = Column(Text)
 
 
-Index('my_index', MyModel.name, unique=True, mysql_length=255)
+Index('my_index', MyModel.fname, unique=True, mysql_length=255)

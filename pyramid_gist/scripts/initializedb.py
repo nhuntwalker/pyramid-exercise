@@ -15,7 +15,7 @@ from ..models import (
     get_session_factory,
     get_tm_session,
     )
-from ..models import MyModel
+from pyramid_gist.models import MyModel
 
 
 def usage(argv):
