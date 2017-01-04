@@ -1,0 +1,16 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="content">
+  <h2>Active Users</h2>
+  {% for item in entries %}
+    <article>
+        <p class="username">
+            <a href="{{ request.route_url('detail', id=item.id) }}">
+                {{ item.fname }} {{ item.lname }}
+            </a>
+        </p>
+    </article>
+  {% endfor %}
+</div>
+{% endblock content %}

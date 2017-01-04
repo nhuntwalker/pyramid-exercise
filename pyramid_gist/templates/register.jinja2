@@ -1,0 +1,26 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="content">
+  <h2>Please enter your data</h2>
+</div>
+<section clas="form">
+  <form action="{{ request.route_url('register') }}" method="POST">
+    <input type="hidden" name="csrf_token" value="{{ request.session.get_csrf_token() }}" />
+      <section class="form_fields">
+        <h4>Username</h4>
+        <input type="text" class="form-control" name="username">
+        <h4>Password</h4>
+        <input type="text" class="form-control" name="password">
+        <h4>First Name</h4>
+        <input type="text" class="form-control" name="fname">
+        <h4>Last Name</h4>
+        <input type="text" class="form-control" name="lname">
+        <h4>Favorite Food</h4>
+        <input type="text" class="form-control" name="ffood">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </section>
+  </form>
+
+</section>
+{% endblock content %}

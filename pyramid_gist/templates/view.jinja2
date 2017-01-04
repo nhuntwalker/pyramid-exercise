@@ -1,0 +1,11 @@
+{% extends "layout.jinja2" %}
+{% block body %}
+<section>
+<article>
+    <h2 class="fname">{{ entries.fname }}</h2>
+    <p class="lname">{{ entries.lname }}</p>
+    <p class="ffood">{{ entries.ffood }}</p>
+    <a class="btn btn-primary" href="{{ request.route_url('home') }}">Back</a>
+</article>
+</section>
+{% endblock %}
